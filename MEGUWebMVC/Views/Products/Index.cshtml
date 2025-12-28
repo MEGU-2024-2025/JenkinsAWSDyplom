@@ -1,0 +1,34 @@
+﻿@model ProductListViewModel
+
+<div class="container mt-5">
+	<h2 class="text-center mb-4">Категорії мультфільмів</h2>
+
+	@await Html.PartialAsync("_ProductSearchItem", Model.Search)
+
+	@if (@Model.Search.Pagination.TotalItems > 0)
+	{
+		<div class="alert alert-primary mt-2" role="alert">
+			Кількість елементів: <strong>@Model.Search.Pagination.TotalItems</strong>
+		</div>
+	}
+
+	@await Html.PartialAsync("_ListProductItems", Model.Products)
+	@await Html.PartialAsync("_PaginationSelector", Model.Search.Pagination)
+</div>
+
+@section Scripts {
+	<script>
+		function updatePage(page) {
+			const pageInput = document.getElementById("Pagination_CurrentPage");
+			if (pageInput) {
+				pageInput.value = page;
+			}
+
+			document.querySelector("form").submit();
+		}
+
+		document.getElementById("Pagination_ItemsPerPage").onchange = function () {
+			document.querySelector("form").submit();
+		};
+	</script>
+}
