@@ -5,7 +5,7 @@
         /// <summary>
         /// Хто відправляє листа
         /// </summary>
-        public const string From = "sasho-zub@ukr.net";
+        public const string From = "megu_student@ukr.net";
         /// <summary>
         /// Адреса SMTP сервера
         /// </summary>
@@ -17,11 +17,11 @@
         /// <summary>
         /// Імя користувача для авторизації
         /// </summary>
-        public const string UserName = "sasho-zub@ukr.net";
+        public const string UserName = "megu_student@ukr.net";
         /// <summary>
         /// Пароль, який видав сервер
         /// </summary>
-        public const string Password = "W0wqQXDlZxsboGhV";
+        public const string Password = "8sRr1msvvdbcX8kx";
 
     }
 }

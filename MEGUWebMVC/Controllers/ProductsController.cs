@@ -14,7 +14,7 @@ namespace MEGUWebMVC.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(ProductSearchViewModel searchModel)
         {
-            ViewBag.Title = "Продукти";
+            ViewBag.Title = "Фільми";
 
             searchModel.Categories = await mapper
                 .ProjectTo<SelectItemViewModel>(context.Categories)
